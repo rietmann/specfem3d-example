@@ -1,0 +1,13 @@
+PDE  2012 02 11 22 45 26.00  67000 67000 32000 4.2 4.2 ZUG
+event name:       zug
+time shift:       0.0000
+half duration:    0.0
+latitude:       47.15
+longitude:      8.55
+depth:          32.0
+Mrr:       1.000000e+23
+Mtt:       1.000000e+23
+Mpp:       1.000000e+23
+Mrt:       0.000000
+Mrp:       0.000000
+Mtp:       0.000000
