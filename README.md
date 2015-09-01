@@ -15,7 +15,7 @@ I'll assume you are comfortable enough to make adjustments to. I'll assume you'r
     ./configure FC=ifort
     make
 
-This step can be error prone, and the version I pulled over two years ago for my thesis work is now hopelessly out of date, so you will quickly know as much as I do about building specfem3d.
+This step can be error prone, and the version I pulled over two years ago for my thesis work is now hopelessly out of date, so you will quickly know as much as I do about building specfem3d. For GPU support add `--with-cuda`.
 
 You should now have the following executables:
 
@@ -27,8 +27,8 @@ You should now have the following executables:
 Info about the executables
 
 * `xdecompose_mesh` loads a finite element mesh and partitions it into
-  the user-supplied number of parts. Run serially (`./xdecompose_mesh
-  <NPROC> ../MESH_LOCATION/ ../OUTPUT_FILES/DATABASES_MPI/`)
+  the user-supplied number of parts. Run serially (`./bin/xdecompose_mesh
+  <NPROC> ./MESH_LOCATION/ ./OUTPUT_FILES/DATABASES_MPI/`)
 * `xgenerate_databases` takes the partitioned mesh and prepares it for
   a simulation. Run in parallel (`aprun -n <NPROC>
   ./xgenerate_databasese`)
@@ -63,7 +63,7 @@ The simulation is configured with:
 
 Assuming a single processor (NPROC=1), we run the proprocessing stage:
     
-    ./bin/xdecompose_mesh 1 ../MESH_CH_45K ../OUTPUT_FILES/DATABASES_MPI
+    ./bin/xdecompose_mesh 1 ./MESH_CH_45K ./OUTPUT_FILES/DATABASES_MPI
     mpirun -np 1 ./bin/xgenerate_databases
     
 This creates a file `OUTPUT_FILES/output_mesher.txt`, which contains the line
