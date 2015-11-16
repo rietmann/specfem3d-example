@@ -10,7 +10,7 @@ First we get specfem3d from its repository
     cd specfem3d
 
 Specfem3d uses the autotools/configure/make build environment, which
-I'll assume you are comfortable enough to make adjustments to. I'll assume you're mpif90 is already equipped with ifort (with compiled mpi module i.e., `use mpi` works).
+I'll assume you are comfortable enough to make adjustments to. I'll assume your mpif90 is already equipped with ifort (with compiled mpi module i.e., `use mpi` works).
 
     ./configure FC=ifort
     make
